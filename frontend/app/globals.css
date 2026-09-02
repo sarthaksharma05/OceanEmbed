@@ -2,7 +2,7 @@
 
 @theme {
   /* ─────────────────────────────────────────
-     OceanEmbed Colors
+     OceanEmbed Colors (Preserved Light Theme)
      ───────────────────────────────────────── */
 
   --color-background: #f9f9ff;
@@ -85,52 +85,25 @@
      OceanEmbed Border Radius
      ───────────────────────────────────────── */
 
-  --radius-default: 0.25rem;
+  --radius-default: 0.375rem;
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
 
   /* ─────────────────────────────────────────
-     OceanEmbed Fonts
+     OceanEmbed Fonts (Google-Inspired)
      ───────────────────────────────────────── */
 
-  --font-display-lg-mobile: "Inter", sans-serif;
-  --font-display-lg: "Inter", sans-serif;
-  --font-body-md: "Inter", sans-serif;
-  --font-label-sm: "Inter", sans-serif;
-  --font-data-tabular: "Inter", sans-serif;
-  --font-headline-md: "Inter", sans-serif;
+  --font-sans: var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
+  --font-jakarta: var(--font-plus-jakarta-sans), sans-serif;
 
-  /* ─────────────────────────────────────────
-     OceanEmbed Typography
-     ───────────────────────────────────────── */
-
-  --text-display-lg-mobile: 24px;
-  --text-display-lg-mobile--line-height: 32px;
-  --text-display-lg-mobile--font-weight: 600;
-  --text-display-lg-mobile--letter-spacing: -0.02em;
-
-  --text-body-md: 14px;
-  --text-body-md--line-height: 20px;
-  --text-body-md--font-weight: 400;
-
-  --text-display-lg: 32px;
-  --text-display-lg--line-height: 40px;
-  --text-display-lg--font-weight: 600;
-  --text-display-lg--letter-spacing: -0.02em;
-
-  --text-label-sm: 12px;
-  --text-label-sm--line-height: 16px;
-  --text-label-sm--font-weight: 500;
-  --text-label-sm--letter-spacing: 0.01em;
-
-  --text-data-tabular: 13px;
-  --text-data-tabular--line-height: 18px;
-  --text-data-tabular--font-weight: 400;
-
-  --text-headline-md: 18px;
-  --text-headline-md--line-height: 28px;
-  --text-headline-md--font-weight: 600;
+  --font-display-lg-mobile: var(--font-outfit), sans-serif;
+  --font-display-lg: var(--font-outfit), sans-serif;
+  --font-body-md: var(--font-plus-jakarta-sans), sans-serif;
+  --font-label-sm: var(--font-plus-jakarta-sans), sans-serif;
+  --font-data-tabular: var(--font-plus-jakarta-sans), monospace;
+  --font-headline-md: var(--font-outfit), sans-serif;
 }
 
 html,
@@ -141,13 +114,34 @@ body {
 
 html {
   background: #f9f9ff;
+  font-family: var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
   background: #f9f9ff;
   color: #191c20;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings use Outfit sparingly */
+h1, h2, h3, .font-display-lg, .font-headline-md {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+/* Smooth micro-interaction transitions */
+a, button, input, select {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a, button, input, select, div {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
 }
 
 main > :first-child {
@@ -159,10 +153,9 @@ main > :last-child {
 }
 
 /* Scrollbar */
-
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -178,8 +171,7 @@ main > :last-child {
   background: #727784;
 }
 
-/* Material Symbols */
-
+/* Material Symbols Outlined */
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";
   font-weight: normal;
