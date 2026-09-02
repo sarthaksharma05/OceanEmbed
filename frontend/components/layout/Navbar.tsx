@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -60,14 +61,19 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right Section: Indian Meteorological Department (IMD / MoES, Govt. of India) Emblem */}
+        {/* Right Section: Official India Meteorological Department (IMD / MoES, Govt. of India) Logo */}
         <div className="flex items-center gap-3 z-10">
-          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-surface-container-low/80 border border-border-subtle/80 shadow-2xs">
-            {/* IMD / Govt Emblem Icon */}
-            <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
-              <span className="material-symbols-outlined text-primary text-[14px]">
-                wb_sunny
-              </span>
+          <div className="flex items-center gap-2">
+            {/* IMD Official Crest Logo */}
+            <div className="relative w-9 h-9 flex items-center justify-center shrink-0">
+              <Image
+                src="/imd-logo.png"
+                alt="India Meteorological Department (IMD)"
+                width={36}
+                height={36}
+                className="object-contain w-full h-full"
+                priority
+              />
             </div>
 
             {/* Department Text */}
