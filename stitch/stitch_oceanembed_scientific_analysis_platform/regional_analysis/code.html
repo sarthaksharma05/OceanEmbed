@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-background":"#191c20","on-error-container":"#93000a","error-container":"#ffdad6","primary":"#004e9f","primary-fixed":"#d7e3ff","primary-container":"#0066cc","on-secondary-fixed":"#002020","surface-container":"#ededf3","outline":"#727784","secondary-fixed-dim":"#84d4d3","background":"#f9f9ff","border-subtle":"#C1C6D5","outline-variant":"#c1c6d5","on-secondary-fixed-variant":"#004f4f","on-surface":"#191c20","text-primary":"#191C22","surface-container-low":"#f3f3f9","tertiary-fixed-dim":"#ffb692","on-tertiary":"#ffffff","on-primary":"#ffffff","surface-dim":"#d9dadf","tertiary-container":"#a84e19","inverse-surface":"#2e3035","surface-container-lowest":"#ffffff","surface-container-high":"#e7e8ee","secondary-fixed":"#a0f0f0","error":"#ba1a1a","text-secondary":"#414753","on-secondary-container":"#0b6e6e","on-secondary":"#ffffff","on-primary-fixed":"#001b3e","on-tertiary-container":"#ffe2d6","inverse-primary":"#aac7ff","primary-fixed-dim":"#aac7ff","secondary-container":"#9deeed","on-error":"#ffffff","tertiary":"#883700","tertiary-fixed":"#ffdbcb","on-primary-fixed-variant":"#00458e","on-primary-container":"#dfe8ff","surface":"#F9F9FF","on-tertiary-fixed-variant":"#793000","on-surface-variant":"#414753","inverse-on-surface":"#f0f0f6","secondary":"#006a6a","surface-container-highest":"#e2e2e8","surface-bright":"#f9f9ff","surface-tint":"#005cba","on-tertiary-fixed":"#341100","surface-variant":"#e2e2e8"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"16px","margin-mobile":"16px","grid-8":"8px","max-width-container":"1280px","margin-desktop":"24px","grid-16":"16px"},"fontFamily":{"display-lg-mobile":["Inter"],"body-md":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"data-tabular":["Inter"],"headline-md":["Inter"]},"fontSize":{"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"data-tabular":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"28px","fontWeight":"600"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant"><div class="h-16 max-w-max-width-container mx-auto px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-grid-8"><span class="material-symbols-outlined text-primary">tsunami</span><span class="font-display-lg-mobile text-primary tracking-tight">OceanEmbed</span></div><nav class="hidden lg:flex items-center gap-grid-16 h-full" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="font-label-sm text-on-surface-variant hover:text-on-surface px-2 h-full flex items-center transition-colors" data-path="explorer" href="#">Explorer</a><a aria-current="page" class="px-2 h-full flex items-center transition-colors text-primary font-semibold border-b-2 border-primary" data-path="regional-analysis" href="#">Regional Analysis</a><a class="font-label-sm text-on-surface-variant hover:text-on-surface px-2 h-full flex items-center transition-colors" data-path="model-performance" href="#">Model Performance</a><a class="font-label-sm text-on-surface-variant hover:text-on-surface px-2 h-full flex items-center transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-grid-16"><div class="hidden md:flex items-center gap-grid-8 px-grid-8 py-1 bg-surface-container rounded-full border border-outline-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-on-surface-variant uppercase tracking-wider">Data Status: Online</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-64px)]"><div class="max-w-max-width-container mx-auto px-margin-desktop py-grid-16"><div class="flex flex-col w-full font-body-md text-on-background relative overflow-hidden pb-16">
+<!-- Header Section -->
+<div class="w-full relative z-10 pt-8 pb-12">
+<div class="max-w-max-width-container mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start md:items-end gap-grid-16">
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2 flex items-center gap-2">
+<span class="w-8 h-[1px] bg-primary"></span> Regional Analysis Module
+                </p>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight mb-2">Reconstructed Subsurface Temperature</h1>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">High-resolution spatial analysis of reconstructed subsurface thermal structures utilizing integrated satellite and ARGO profiling data.</p>
+</div>
+<div class="flex items-center gap-4 bg-surface-container rounded-lg p-2 shadow-sm">
+<button class="px-4 py-2 rounded bg-primary text-on-primary font-label-sm text-label-sm transition-transform hover:scale-105 active:scale-95 shadow-md">
+                    Export Data (NetCDF)
+                </button>
+<button class="px-4 py-2 rounded bg-surface text-primary font-label-sm text-label-sm transition-colors hover:bg-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">settings</span> Settings
+                </button>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="max-w-max-width-container mx-auto px-margin-desktop w-full grid grid-cols-12 gap-gutter relative z-10">
+<!-- Sidebar Controls -->
+<aside class="col-span-12 lg:col-span-3 flex flex-col gap-grid-16">
+<!-- Region Selection -->
+<div class="bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary">explore</span> Focus Region
+                </h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container cursor-pointer transition-colors hover:bg-surface-container-high group">
+<input checked="" class="w-4 h-4 text-primary accent-primary" name="region" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Bay of Bengal (BoB)</span>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface cursor-pointer transition-colors hover:bg-surface-container-high group border border-outline-variant">
+<input class="w-4 h-4 text-primary accent-primary" name="region" type="radio"/>
+<span class="font-body-md text-body-md text-text-secondary group-hover:text-primary transition-colors">Arabian Sea (AS)</span>
+</label>
+</div>
+</div>
+<!-- Temporal Controls -->
+<div class="bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary">calendar_month</span> Temporal
+                </h3>
+<div class="flex flex-col gap-3">
+<label class="font-label-sm text-label-sm text-text-secondary">Analysis Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container rounded-lg px-4 py-3 font-data-tabular text-data-tabular text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" type="date" value="2023-11-15"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">calendar_today</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<button class="p-2 rounded hover:bg-surface-container text-text-secondary transition-colors" title="Previous Day">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Daily Mean</span>
+<button class="p-2 rounded hover:bg-surface-container text-text-secondary transition-colors" title="Next Day">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Vertical Profile (Depth) -->
+<div class="bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm flex flex-col gap-4 flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary">water_drop</span> Depth Level
+                </h3>
+<div class="relative flex-grow flex flex-col">
+<div class="flex justify-between items-center mb-4">
+<span class="font-data-tabular text-data-tabular text-primary font-semibold bg-primary-container/10 px-3 py-1 rounded-full">Selected: 75m</span>
+<span class="font-label-sm text-label-sm text-text-secondary">Level 6/15</span>
+</div>
+<!-- Custom Depth Slider Visualization -->
+<div class="relative flex-grow min-h-[200px] flex gap-4 ml-2">
+<!-- Depth Scale Axis -->
+<div class="w-8 flex flex-col justify-between items-end pb-4 font-data-tabular text-label-sm text-text-secondary relative">
+<span class="absolute top-0 right-2">0m</span>
+<span class="absolute top-[25%] right-2">50m</span>
+<span class="absolute top-[50%] right-2">150m</span>
+<span class="absolute top-[75%] right-2">300m</span>
+<span class="absolute bottom-0 right-2">700m</span>
+<!-- Tick marks -->
+<div class="absolute right-0 top-0 w-1 h-[1px] bg-outline"></div>
+<div class="absolute right-0 top-[25%] w-1 h-[1px] bg-outline"></div>
+<div class="absolute right-0 top-[50%] w-1 h-[1px] bg-outline"></div>
+<div class="absolute right-0 top-[75%] w-1 h-[1px] bg-outline"></div>
+<div class="absolute right-0 bottom-0 w-1 h-[1px] bg-outline"></div>
+</div>
+<!-- Slider Track -->
+<div class="w-12 bg-surface-container-high rounded-full relative overflow-hidden group cursor-pointer shadow-inner">
+<!-- Depth Gradient Background -->
+<div class="absolute inset-0 bg-gradient-to-b from-[#84d4d3]/20 via-[#0066cc]/20 to-[#001b3e]/40"></div>
+<!-- Active Depth Indicator (Draggable ideally, positioned via CSS for now) -->
+<div class="absolute w-full h-8 bg-primary/20 top-[35%] -translate-y-1/2 border-y-2 border-primary group-hover:bg-primary/30 transition-colors shadow-sm z-10 flex items-center justify-center">
+<div class="w-6 h-1 bg-primary rounded-full"></div>
+</div>
+<!-- Simulated standard levels -->
+<div class="absolute inset-x-0 top-[5%] h-[1px] bg-outline-variant/50"></div>
+<div class="absolute inset-x-0 top-[15%] h-[1px] bg-outline-variant/50"></div>
+<div class="absolute inset-x-0 top-[25%] h-[1px] bg-outline-variant/50"></div>
+<div class="absolute inset-x-0 top-[35%] h-[1px] bg-primary"></div>
+<div class="absolute inset-x-0 top-[45%] h-[1px] bg-outline-variant/50"></div>
+<div class="absolute inset-x-0 top-[60%] h-[1px] bg-outline-variant/50"></div>
+<div class="absolute inset-x-0 top-[80%] h-[1px] bg-outline-variant/50"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Analysis Parameters -->
+<div class="bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-primary">tune</span> Parameters
+                </h3>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">View Mode</span>
+<div class="flex bg-surface-container rounded-lg p-1">
+<button class="px-3 py-1 bg-surface shadow-sm rounded-md font-label-sm text-label-sm text-primary transition-all">Absolute (T)</button>
+<button class="px-3 py-1 text-text-secondary hover:text-on-surface rounded-md font-label-sm text-label-sm transition-all">Anomaly (T')</button>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-label-sm text-label-sm text-on-surface">Interpolation</span>
+<select class="bg-surface-container text-on-surface font-label-sm text-label-sm rounded-md px-2 py-1 outline-none border border-transparent focus:border-primary">
+<option>Bicubic Spline</option>
+<option>Nearest Neighbor</option>
+<option>Kriging</option>
+</select>
+</div>
+</div>
+</aside>
+<!-- Main Visualization Area -->
+<main class="col-span-12 lg:col-span-9 flex flex-col gap-grid-16">
+<!-- Spatial Heatmap Panel -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col relative h-[600px]">
+<!-- Overlay Header -->
+<div class="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-surface-container-lowest/90 to-transparent z-10 flex justify-between items-start pointer-events-none">
+<div class="pointer-events-auto bg-surface/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-outline-variant/50">
+<h2 class="font-headline-md text-headline-md text-on-surface m-0">Bay of Bengal - 75m Reconstructed Temperature</h2>
+<p class="font-data-tabular text-data-tabular text-text-secondary m-0 mt-1">Lat: 5°N to 22°N | Lon: 78°E to 98°E</p>
+</div>
+<div class="pointer-events-auto flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface/90 backdrop-blur-sm shadow-sm flex items-center justify-center text-text-secondary hover:text-primary transition-colors border border-outline-variant/50" title="Toggle Gridlines">
+<span class="material-symbols-outlined">grid_on</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface/90 backdrop-blur-sm shadow-sm flex items-center justify-center text-text-secondary hover:text-primary transition-colors border border-outline-variant/50" title="Download Image">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Main Heatmap Visualization (Simulated with Placeholder Image & Map Layer) -->
+<div class="relative w-full h-full bg-surface-container flex items-center justify-center overflow-hidden">
+<!-- Simulated Ocean Temperature Heatmap -->
+<div class="absolute inset-0 bg-cover bg-center opacity-90 mix-blend-multiply" data-alt="A highly detailed scientific spatial heatmap visualization of the Bay of Bengal ocean region. The image should feature a vibrant, continuous color gradient representing ocean temperatures from deep blue (cool) to vibrant red/orange (warm). Overlaid on this gradient should be subtle contour lines indicating temperature gradients, and a faint latitude/longitude grid structure. The landmass of Eastern India and Southeast Asia should be visible as solid, neutral dark gray or black geometric shapes creating the coastal boundaries. Modern, minimalist scientific aesthetic, high resolution, precise." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDB2B82SgmGItnQsH6YrHXGOk31UZn94o53oju9bm7DZpU8k28DKEEgOns0HR08JF-OSte0clhlnrgK4DO7h3iFubphgBvAm1V3_8FL9J-ffpgHLMDCjaxM1ZSBxzvs38tOZbz1tS15pBI576DJxGhxxkRQOgO-eAumyq6zVLs3HcJ57kCL9pI-v718jYKx4njz63fS4FEkbLxHBKWh_jHLyBddLvR2OEwrKo8AmDUHurfS85j-wb2K')"></div>
+<!-- Landmass Overlay (Stylized map placeholder) -->
+<div class="absolute inset-0 opacity-40 mix-blend-color-burn grayscale pointer-events-none" data-location="Bay of Bengal" style=""></div>
+<!-- Interactive Reticle (Simulated Hover State) -->
+<div class="absolute top-[40%] left-[55%] pointer-events-none group">
+<div class="w-4 h-4 rounded-full border-2 border-surface bg-primary shadow-[0_0_10px_rgba(0,78,159,0.5)] animate-pulse"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface-container-lowest/95 backdrop-blur shadow-lg border border-outline-variant px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="font-data-tabular text-data-tabular text-on-surface font-semibold">28.4 °C</p>
+<p class="font-label-sm text-label-sm text-text-secondary">14.2°N, 88.5°E</p>
+</div>
+</div>
+</div>
+<!-- Legend & Colorbar -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-surface/95 backdrop-blur shadow-md px-6 py-3 rounded-xl border border-outline-variant/50 flex flex-col gap-2 w-3/4 max-w-md">
+<div class="flex justify-between font-data-tabular text-label-sm text-text-secondary px-1">
+<span>22.0°C</span>
+<span class="font-semibold text-on-surface uppercase tracking-wider text-[10px]">Temperature (°C)</span>
+<span>31.0°C</span>
+</div>
+<!-- Scientific Color Palette Gradient (Cool to Warm) -->
+<div class="h-3 w-full rounded-full bg-gradient-to-r from-[#001b3e] via-[#0066cc] via-[#84d4d3] via-[#e7e8ee] via-[#ffb692] to-[#883700] relative shadow-inner">
+<!-- Example indicator mark -->
+<div class="absolute top-1/2 -translate-y-1/2 left-[70%] w-1 h-5 bg-surface border border-outline shadow-sm rounded-sm"></div>
+</div>
+</div>
+</div>
+<!-- Regional Statistics Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-6 gap-grid-16">
+<!-- Stat Card: Mean Temp -->
+<div class="col-span-2 bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm border border-transparent hover:border-outline-variant transition-colors group">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">thermostat</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Spatial Mean</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="font-display-lg text-display-lg text-on-surface">26.8</span>
+<span class="font-body-md text-body-md text-text-secondary mb-1">°C</span>
+</div>
+<div class="mt-4 h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[65%]"></div>
+</div>
+</div>
+<!-- Stat Card: Min/Max -->
+<div class="col-span-2 bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm border border-transparent hover:border-outline-variant transition-colors">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">swap_vert</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Range (Min/Max)</span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">Min</span>
+<span class="font-data-tabular text-headline-md text-on-surface">23.4°</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-tertiary">Max</span>
+<span class="font-data-tabular text-headline-md text-on-surface">30.1°</span>
+</div>
+</div>
+</div>
+<!-- Stat Card: RMSE -->
+<div class="col-span-2 bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm border border-transparent hover:border-outline-variant transition-colors relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute -right-4 -bottom-4 w-24 h-24 bg-tertiary-fixed-dim/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-2 mb-2 relative z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[18px]">analytics</span>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Model RMSE</span>
+</div>
+<div class="flex items-end gap-2 relative z-10">
+<span class="font-display-lg text-display-lg text-on-surface">0.42</span>
+<span class="font-body-md text-body-md text-text-secondary mb-1">°C</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mt-2 flex items-center gap-1 relative z-10">
+<span class="material-symbols-outlined text-[14px]">trending_down</span> -0.05 vs last week
+                    </p>
+</div>
+<!-- Stat Card: Coverage & Correlation -->
+<div class="col-span-2 md:col-span-6 bg-surface-container-lowest rounded-xl p-grid-16 shadow-sm flex flex-col md:flex-row items-center justify-between gap-grid-16">
+<div class="flex-1 w-full flex items-center gap-4">
+<div class="relative w-16 h-16">
+<!-- Inline SVG for progress ring -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 36 36">
+<circle class="stroke-surface-container-high" cx="18" cy="18" fill="none" r="16" stroke-width="3"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="100" stroke-dashoffset="12" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-data-tabular text-label-sm text-on-surface font-semibold">88%</span>
+</div>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider mb-1">Spatial Coverage</p>
+<p class="font-body-md text-body-md text-on-surface">Valid grid points: 14,230 / 16,150</p>
+</div>
+</div>
+<div class="w-full md:w-[1px] h-[1px] md:h-12 bg-outline-variant"></div>
+<div class="flex-1 w-full flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-text-secondary uppercase tracking-wider">Correlation (ARGO)</span>
+<span class="font-data-tabular text-body-md text-primary font-semibold">r = 0.94</span>
+</div>
+<!-- Micro sparkline visualization -->
+<div class="h-6 w-full flex items-end gap-[2px] opacity-80">
+<div class="w-full bg-primary/20 h-[40%] rounded-t-sm"></div>
+<div class="w-full bg-primary/30 h-[50%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[45%] rounded-t-sm"></div>
+<div class="w-full bg-primary/50 h-[60%] rounded-t-sm"></div>
+<div class="w-full bg-primary/60 h-[75%] rounded-t-sm"></div>
+<div class="w-full bg-primary/70 h-[85%] rounded-t-sm"></div>
+<div class="w-full bg-primary/80 h-[80%] rounded-t-sm"></div>
+<div class="w-full bg-primary/90 h-[95%] rounded-t-sm"></div>
+<div class="w-full bg-primary h-[100%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div></div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant py-grid-16"><div class="max-w-max-width-container mx-auto px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-grid-8"><div class="flex items-center gap-grid-8 font-label-sm text-text-secondary"><span class="opacity-70">v2.4.0-stable</span><span class="text-outline">|</span><span class="opacity-70 font-data-tabular">Data: Satellite, GLORYS, ARGO</span></div><nav class="flex items-center gap-grid-16"><a class="font-label-sm text-text-secondary hover:text-primary transition-colors" href="#">Methodology</a><a class="font-label-sm text-text-secondary hover:text-primary transition-colors" href="#">Data Policy</a><a class="font-label-sm text-text-secondary hover:text-primary transition-colors" href="#">Support</a></nav></div></footer></body></html>
