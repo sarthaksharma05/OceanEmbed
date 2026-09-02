@@ -60,40 +60,16 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right Action / Profile & Sign In */}
-        <div className="flex items-center gap-2.5">
-          <Link
-            href="/login"
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-primary/10 text-primary hover:bg-primary/20 text-xs font-semibold transition-colors cursor-pointer"
-          >
-            <span className="material-symbols-outlined text-[16px]">
-              login
-            </span>
-            <span>Sign In</span>
-          </Link>
-
-          <Link
-            href="/login"
-            className="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high text-primary border border-border-subtle/60 flex items-center justify-center transition-all cursor-pointer"
-            title="User Profile & Station Login"
-            aria-label="User Profile"
-          >
-            <span className="material-symbols-outlined text-[18px]">
-              person
-            </span>
-          </Link>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-1.5 text-text-secondary hover:text-on-surface rounded-md focus:outline-none"
-            aria-label="Toggle Navigation Menu"
-          >
-            <span className="material-symbols-outlined text-[22px]">
-              {mobileMenuOpen ? "close" : "menu"}
-            </span>
-          </button>
-        </div>
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="lg:hidden p-1.5 text-text-secondary hover:text-on-surface rounded-md focus:outline-none"
+          aria-label="Toggle Navigation Menu"
+        >
+          <span className="material-symbols-outlined text-[22px]">
+            {mobileMenuOpen ? "close" : "menu"}
+          </span>
+        </button>
       </div>
 
       {/* Mobile Drawer Menu */}
@@ -120,16 +96,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <Link
-            href="/login"
-            onClick={() => setMobileMenuOpen(false)}
-            className="mt-2 px-3 py-2 text-xs font-semibold rounded-md bg-primary text-white text-center flex items-center justify-center gap-1.5"
-          >
-            <span className="material-symbols-outlined text-[16px]">
-              login
-            </span>
-            <span>Sign In / Create Account</span>
-          </Link>
         </div>
       )}
     </header>
