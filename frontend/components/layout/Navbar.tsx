@@ -17,11 +17,11 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-border-subtle/80 shadow-xs">
-      <div className="h-14 max-w-max-width-container mx-auto px-margin-desktop flex items-center justify-between">
-        {/* Brand Logo */}
+      <div className="h-14 max-w-max-width-container mx-auto px-margin-desktop flex items-center justify-between relative">
+        {/* Brand Logo (Left) */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-primary hover:opacity-90 transition-opacity"
+          className="flex items-center gap-2 text-primary hover:opacity-90 transition-opacity z-10"
         >
           <span className="material-symbols-outlined text-[22px] text-primary">
             tsunami
@@ -31,8 +31,8 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 h-full relative">
+        {/* Desktop Centered Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-1 h-full absolute left-1/2 -translate-x-1/2">
           {navItems.map((item) => {
             const isActive =
               item.href === "/"
@@ -60,16 +60,30 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-1.5 text-text-secondary hover:text-on-surface rounded-md focus:outline-none"
-          aria-label="Toggle Navigation Menu"
-        >
-          <span className="material-symbols-outlined text-[22px]">
-            {mobileMenuOpen ? "close" : "menu"}
-          </span>
-        </button>
+        {/* Right Action / Profile Icon */}
+        <div className="flex items-center gap-2.5 z-10">
+          <Link
+            href="/login"
+            className="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high text-primary border border-border-subtle/60 flex items-center justify-center transition-all cursor-pointer shadow-2xs"
+            title="User Profile & Login"
+            aria-label="User Profile"
+          >
+            <span className="material-symbols-outlined text-[18px]">
+              person
+            </span>
+          </Link>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-1.5 text-text-secondary hover:text-on-surface rounded-md focus:outline-none cursor-pointer"
+            aria-label="Toggle Navigation Menu"
+          >
+            <span className="material-symbols-outlined text-[22px]">
+              {mobileMenuOpen ? "close" : "menu"}
+            </span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer Menu */}
