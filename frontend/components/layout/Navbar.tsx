@@ -60,18 +60,26 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right Action / Profile Icon */}
-        <div className="flex items-center gap-2.5 z-10">
-          <Link
-            href="/login"
-            className="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high text-primary border border-border-subtle/60 flex items-center justify-center transition-all cursor-pointer shadow-2xs"
-            title="User Profile & Login"
-            aria-label="User Profile"
-          >
-            <span className="material-symbols-outlined text-[18px]">
-              person
-            </span>
-          </Link>
+        {/* Right Section: Indian Meteorological Department (IMD / MoES, Govt. of India) Emblem */}
+        <div className="flex items-center gap-3 z-10">
+          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-surface-container-low/80 border border-border-subtle/80 shadow-2xs">
+            {/* IMD / Govt Emblem Icon */}
+            <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+              <span className="material-symbols-outlined text-primary text-[14px]">
+                wb_sunny
+              </span>
+            </div>
+
+            {/* Department Text */}
+            <div className="hidden sm:flex flex-col text-left leading-none">
+              <span className="font-sans text-[10px] font-bold text-on-surface tracking-tight">
+                IMD | MoES
+              </span>
+              <span className="font-sans text-[9px] text-text-secondary">
+                Govt. of India
+              </span>
+            </div>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
